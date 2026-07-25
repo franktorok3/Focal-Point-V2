@@ -15,3 +15,7 @@ concurrency:
 jobs:
   standard:
     uses: franktorok3/Project-Setup/.github/workflows/next-ci.yml@main
+    with:
+      node-version: "20"
+      require-build: true
+      run-audit: true
