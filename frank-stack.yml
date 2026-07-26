@@ -1,16 +1,27 @@
-standard_version: 1
-level: prototype
-
-platform:
+schema_version: 1
+standard:
+  repository: franktorok3/Project-Setup
+  ref: main
+  revision: 2026-07-26
+project:
+  name: Focal-Point-V2
+  lifecycle: product
   framework: nextjs
-  hosting: vercel
-  database: none
-  analytics: none
-
-required:
-  ci: true
-  migrations: false
-  telemetry: false
-  health_check: false
-  rls: false
-  error_tracking: false
+  runtime: node
+  node_version: "24"
+quality_gates:
+  lockfile_required: true
+  lint: tracked-debt
+  typecheck: optional
+  tests: optional
+  build: required
+  dependency_audit: report
+operations:
+  deployment: vercel
+  analytics: vercel
+  data_store: none
+  helicarrier: planned
+security:
+  secrets_in_repository: prohibited
+  production_changes_via_pull_request: required
+  missing_evidence_is_healthy: false
