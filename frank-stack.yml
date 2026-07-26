@@ -2,6 +2,7 @@ schema_version: 1
 standard:
   repository: franktorok3/Project-Setup
   ref: main
+  revision: 2026-07-26
 project:
   name: Focal-Point-V2
   lifecycle: product
