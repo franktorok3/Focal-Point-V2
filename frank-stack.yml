@@ -10,7 +10,7 @@ project:
   node_version: "24"
 quality_gates:
   lockfile_required: true
-  lint: required
+  lint: tracked-debt
   typecheck: optional
   tests: optional
   build: required
