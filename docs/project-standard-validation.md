@@ -4,4 +4,4 @@ This file exists to validate the shared Project Standard CI through a pull reque
 
 Expected required check: `standard / verify`.
 
-Validation rerun: pnpm setup hardened in Project-Setup.
+Validation rerun: pnpm 10.6.2 is explicitly pinned in Project-Setup.
