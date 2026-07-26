@@ -9,14 +9,17 @@ permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.workflow }}-${{ github.ref }}
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
-  standard:
+  manifest:
+    uses: franktorok3/Project-Setup/.github/workflows/manifest.yml@main
+  application:
     uses: franktorok3/Project-Setup/.github/workflows/next-ci.yml@main
     with:
-      node-version: "20"
+      node-version: "24"
       require-lint: false
       require-build: true
       run-audit: true
+      audit-blocking: false
