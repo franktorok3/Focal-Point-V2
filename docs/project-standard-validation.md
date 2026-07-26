@@ -4,4 +4,4 @@ This file exists to validate the shared Project Standard CI through a pull reque
 
 Expected required check: `standard / verify`.
 
-Validation rerun: pnpm is pinned and dependency audit is report-only at Product level.
+Validation rerun: pnpm is pinned, audits report at Product level, and temporary lint debt is tracked in issue #8.
