@@ -1,0 +1,32 @@
+import { insights } from '@/lib/content'
+
+function escapeXml(value: string) {
+  return value.replace(/[<>&'"]/g, (character) => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', "'": '&apos;', '"': '&quot;' })[character] || character)
+}
+
+export function GET() {
+  const base = 'https://www.focalpointny.com'
+  const items = insights
+    .map((insight) => `
+      <item>
+        <title>${escapeXml(insight.title)}</title>
+        <link>${base}/insights/${insight.slug}</link>
+        <guid>${base}/insights/${insight.slug}</guid>
+        <description>${escapeXml(insight.description)}</description>
+        <pubDate>${new Date('2026-09-30T12:00:00-04:00').toUTCString()}</pubDate>
+        <category>${escapeXml(insight.pillar)}</category>
+      </item>`)
+    .join('')
+
+  const xml = `<?xml version="1.0" encoding="UTF-8" ?>
+    <rss version="2.0">
+      <channel>
+        <title>Focal Point Field Notes</title>
+        <link>${base}/insights</link>
+        <description>Practical thinking on systems, data, operations, transformation, and applied AI.</description>
+        ${items}
+      </channel>
+    </rss>`
+
+  return new Response(xml, { headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' } })
+}

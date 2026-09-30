@@ -99,12 +99,15 @@
     @apply font-sans;
     scroll-behavior: smooth;
   }
+  section[id] {
+    scroll-margin-top: 4rem;
+  }
 }
 
 @layer utilities {
   .reveal {
-    opacity: 0;
-    transform: translateY(16px);
+    opacity: 1;
+    transform: none;
     transition:
       opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
       transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Reveal } from '@/components/reveal'
@@ -54,8 +55,9 @@ export function Hero() {
         <div className="mt-10 grid gap-8 border-t border-border pt-8 sm:grid-cols-12 sm:gap-6">
           <Reveal delay={160} className="sm:col-span-7">
             <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty sm:text-xl">
-              Focal Point helps organizations connect marketing, operations,
-              data, and AI into clearer, faster, more scalable workflows.
+              Focal Point helps growing organizations turn disconnected tools,
+              scattered data, and promising AI experiments into one dependable
+              operating system.
             </p>
           </Reveal>
 
@@ -77,11 +79,36 @@ export function Hero() {
                 variant="ghost"
                 className="h-12 w-full px-5 text-base text-muted-foreground hover:text-foreground sm:w-auto"
                 nativeButton={false}
-                render={<a href="#services">Explore our work</a>}
+                render={<a href="/work">See how the work comes together</a>}
               />
             </div>
           </Reveal>
         </div>
+
+        <Reveal delay={280}>
+          <p className="mt-8 text-sm text-muted-foreground">
+            Strategy, systems design, and hands-on implementation—led by Frank
+            Torok in New York.
+          </p>
+        </Reveal>
+
+        <Reveal delay={320}>
+          <figure className="mt-12 overflow-hidden rounded-2xl border border-border bg-card">
+            <Image
+              src="/images/hero-systems-to-focal-point.png"
+              alt="Editorial systems map showing disconnected workflows converging into one clear focal point."
+              width={1792}
+              height={896}
+              priority
+              sizes="(max-width: 768px) 100vw, 1152px"
+              className="h-auto w-full"
+            />
+            <figcaption className="flex flex-col gap-2 border-t border-border px-5 py-4 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+              <span>From fragmented activity to a governed operating system.</span>
+              <span className="font-mono uppercase tracking-[0.14em]">The Focal Point thesis</span>
+            </figcaption>
+          </figure>
+        </Reveal>
       </div>
     </section>
   )
