@@ -16,7 +16,7 @@ export default function WorkPage() {
     <div className="min-h-dvh">
       <SiteNav />
       <main>
-        <PageHero eyebrow="Selected work" title="Show the operating problem, not just the finished interface." description="These cases focus on the decisions, evidence, and system design beneath the implementation. Client identifiers are withheld where required." />
+        <PageHero eyebrow="Selected work" title="The interface is the visible part. The system is the work." description="These cases show the decisions, evidence, controls, and operating design beneath the implementation. Client identifiers are withheld where required." />
         <SelectedWork />
         <Contact />
       </main>

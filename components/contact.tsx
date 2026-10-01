@@ -53,11 +53,11 @@ export function Contact() {
             <Reveal>
               <FocalMark className="size-8 text-accent" />
               <h2 className="mt-7 font-serif text-4xl leading-[1.05] tracking-tight text-balance sm:text-6xl">
-                Let&apos;s find the focal point.
+                Find the leverage before you fund the theater.
               </h2>
               <p className="mt-6 max-w-md text-lg leading-relaxed text-muted-foreground text-pretty">
-                Tell us where the work feels tangled. We&apos;ll help identify
-                the constraint and the most useful next step.
+                Tell us where growth, data, and AI keep colliding. We&apos;ll help
+                identify the decision, the constraint, and the most useful next move.
               </p>
               <p className="mt-8 text-sm text-muted-foreground">
                 Prefer email?{' '}
@@ -115,8 +115,8 @@ export function Contact() {
                   </div>
 
                   <div className="mt-5 flex flex-col gap-2">
-                    <label htmlFor="message" className="text-sm font-medium">What needs to work better?</label>
-                    <textarea id="message" name="message" required minLength={20} rows={5} placeholder="Tell us about the systems, handoffs, decisions, or goals involved." className={`${inputClasses} resize-y`} />
+                    <label htmlFor="message" className="text-sm font-medium">Where is the opportunity getting stuck?</label>
+                    <textarea id="message" name="message" required minLength={20} rows={5} placeholder="Tell us about the customer journey, campaign, data, decision, workflow, or AI idea involved." className={`${inputClasses} resize-y`} />
                   </div>
 
                   <div className="absolute -left-[9999px]" aria-hidden="true">

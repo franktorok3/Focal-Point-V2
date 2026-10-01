@@ -11,11 +11,11 @@ export function Offerings() {
             How we engage
           </p>
           <h2 className="mt-5 max-w-3xl font-serif text-3xl leading-tight tracking-tight text-balance sm:text-5xl">
-            Diagnose the constraint. Build the system. Keep it moving.
+            Find the leverage. Build the capability. Keep it honest.
           </h2>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-            Three offers create a clear path from uncertainty to operating
-            capability. Start where the organization actually is.
+            Strategy is useful only when it changes how the organization works.
+            Start with the opportunity, then build the system that can deliver it.
           </p>
         </Reveal>
 

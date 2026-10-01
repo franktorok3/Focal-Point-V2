@@ -3,6 +3,7 @@ import { SiteNav } from '@/components/site-nav'
 import { SiteFooter } from '@/components/site-footer'
 import { PageHero } from '@/components/page-hero'
 import { Offerings } from '@/components/offerings'
+import { Capabilities } from '@/components/capabilities'
 import { Method } from '@/components/method'
 import { FAQ } from '@/components/faq'
 import { Contact } from '@/components/contact'
@@ -10,7 +11,7 @@ import { Contact } from '@/components/contact'
 export const metadata: Metadata = {
   title: 'Consulting Services',
   description:
-    'Systems clarity, operating system implementation, and fractional transformation and AI operations for growing organizations.',
+    'AI-powered experiences, intelligent campaigns, decision intelligence, agentic operations, and the systems that connect them.',
 }
 
 export default function ServicesPage() {
@@ -18,7 +19,8 @@ export default function ServicesPage() {
     <div className="min-h-dvh">
       <SiteNav />
       <main>
-        <PageHero eyebrow="Services" title="A clear path from constraint to capability." description="Start with the decision the organization needs to make—not a predetermined platform, dashboard, or AI tool." />
+        <PageHero eyebrow="Services" title="From AI ambition to operating advantage." description="Connect the experience, campaign, intelligence, and operating system around the outcome the organization actually needs." />
+        <Capabilities />
         <Method />
         <Offerings />
         <FAQ />

@@ -18,24 +18,24 @@ const instrumentSerif = Instrument_Serif({
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.focalpointny.com'),
   title: {
-    default: 'Focal Point — Simplify the systems behind growth',
+    default: 'Focal Point — Turn AI ambition into measurable growth',
     template: '%s | Focal Point',
   },
   description:
-    'Focal Point helps growing organizations turn disconnected tools, scattered data, and promising AI experiments into one dependable operating system.',
+    'Focal Point connects websites, campaigns, data, dashboards, and governed AI agents into one measurable growth system.',
   openGraph: {
     type: 'website',
     siteName: 'Focal Point NY',
-    title: 'Focal Point — Simplify the systems behind growth',
+    title: 'Focal Point — Turn AI ambition into measurable growth',
     description:
-      'Strategy, systems design, and hands-on implementation for growing organizations.',
+      'AI-powered experiences, campaigns, decision intelligence, and operating systems—built to work together.',
     url: '/',
     images: [{ url: '/images/hero-systems-to-focal-point.png', width: 1792, height: 896, alt: 'Disconnected systems converging into one clear focal point.' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Focal Point — Simplify the systems behind growth',
-    description: 'Strategy, systems design, and hands-on implementation for growing organizations.',
+    title: 'Focal Point — Turn AI ambition into measurable growth',
+    description: 'AI-powered experiences, campaigns, decision intelligence, and operating systems—built to work together.',
     images: ['/images/hero-systems-to-focal-point.png'],
   },
   icons: { icon: '/icon.svg', apple: '/apple-icon.png' },
@@ -69,7 +69,7 @@ export default function RootLayout({
               founder: { '@type': 'Person', name: 'Frank Torok' },
               areaServed: 'United States',
               description:
-                'Founder-led strategy, systems, data, operations, and applied AI consultancy.',
+                'Founder-led consultancy building AI-powered experiences, campaigns, decision intelligence, and operating systems.',
             }).replace(/</g, '\\u003c'),
           }}
         />

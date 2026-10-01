@@ -13,7 +13,7 @@ export function InsightsPreview() {
                 Field notes
               </p>
               <h2 className="mt-5 max-w-3xl font-serif text-3xl leading-tight tracking-tight text-balance sm:text-5xl">
-                Ideas for leaders building through complexity.
+                Strong opinions, operationally tested.
               </h2>
             </div>
             <a href="/insights" className="inline-flex items-center gap-2 text-sm font-medium hover:text-accent">

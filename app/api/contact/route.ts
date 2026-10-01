@@ -86,7 +86,7 @@ export async function POST(request: Request) {
     `Timeframe: ${timeframe || 'Not provided'}`,
     `Submitted: ${submittedAt}`,
     '',
-    'What needs to work better?',
+    'Where is the opportunity getting stuck?',
     message,
   ].join('\n')
 
@@ -106,7 +106,7 @@ export async function POST(request: Request) {
           <tr><td><strong>Timeframe</strong></td><td>${escapeHtml(timeframe || 'Not provided')}</td></tr>
           <tr><td><strong>Submitted</strong></td><td>${submittedAt}</td></tr>
         </table>
-        <h2 style="font-family:Georgia,serif;font-weight:400">What needs to work better?</h2>
+        <h2 style="font-family:Georgia,serif;font-weight:400">Where is the opportunity getting stuck?</h2>
         <p style="font-family:Arial,sans-serif;font-size:14px;line-height:1.6;white-space:pre-wrap">${escapeHtml(message)}</p>
       `,
     })

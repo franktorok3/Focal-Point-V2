@@ -14,12 +14,13 @@ export function SelectedWork() {
                 Selected work
               </p>
               <h2 className="mt-5 max-w-3xl font-serif text-3xl leading-[1.05] tracking-tight text-balance sm:text-5xl">
-                Systems work, shown at the level where it becomes real.
+                Proof lives below the interface.
               </h2>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground sm:col-span-4">
-              Client identifiers are withheld where required. The operating
-              problem, design choices, and evidence boundaries remain intact.
+              The client name may be withheld. The hard part is not: the
+              decision, system design, evidence, and boundary between working
+              and merely looking finished.
             </p>
           </div>
         </Reveal>

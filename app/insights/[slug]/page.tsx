@@ -72,7 +72,7 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
             <div className="mt-16 rounded-2xl border border-border bg-secondary/40 p-7 sm:p-9">
               <p className="font-mono text-xs uppercase tracking-[0.14em] text-accent">Make it operational</p>
               <h2 className="mt-4 font-serif text-3xl tracking-tight">Where is complexity hiding in your system?</h2>
-              <p className="mt-3 text-base leading-relaxed text-muted-foreground">A Systems Clarity Audit maps the evidence, ownership, and constraints before you invest in another solution.</p>
+              <p className="mt-3 text-base leading-relaxed text-muted-foreground">An AI &amp; Growth Systems Audit finds the opportunity, evidence, ownership, and constraints before you fund another impressive dead end.</p>
               <a href="/contact?service=systems-clarity-audit" className="mt-6 inline-block text-sm font-medium underline underline-offset-4 hover:text-accent">Discuss an audit</a>
             </div>
           </div>

@@ -24,18 +24,18 @@ export default function AboutPage() {
       <main>
         <PageHero
           eyebrow="About Focal Point"
-          title="Senior judgment for systems that cross the org chart."
-          description="Focal Point is a founder-led consultancy for organizations whose growth, operations, data, and AI work can no longer be solved in separate rooms."
+          title="The difficult part of AI is everything around the AI."
+          description="Focal Point is a founder-led consultancy for organizations ready to connect customer experience, growth, data, operations, and AI into one working system."
         />
         <section className="border-b border-border">
           <div className="mx-auto grid max-w-6xl gap-12 px-5 py-24 sm:px-8 sm:py-32 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-5">
               <p className="text-xs font-medium uppercase tracking-[0.18em] text-accent">Frank Torok · Founder & Principal</p>
-              <h2 className="mt-5 font-serif text-4xl leading-tight tracking-tight sm:text-5xl">The work lives between strategy and execution.</h2>
+              <h2 className="mt-5 font-serif text-4xl leading-tight tracking-tight sm:text-5xl">The work begins where the demo ends.</h2>
             </div>
             <div className="space-y-6 text-lg leading-relaxed text-muted-foreground lg:col-span-7">
-              <p>Frank works at the intersection of marketing, operations, finance, data, and applied AI. He has led transformation from inside complex organizations—where technical choices have to survive real budgets, real teams, existing vendors, and imperfect data.</p>
-              <p>Focal Point exists because the most expensive problems rarely belong to one department. They live in the seams: between a customer action and a financial record, between an approval and an automation, or between a strategic priority and the system expected to carry it.</p>
+              <p>Frank works at the intersection of customer experience, growth, operations, finance, data, and applied AI. He has led transformation from inside complex organizations—where technical choices have to survive real budgets, real teams, existing vendors, and imperfect data.</p>
+              <p>Focal Point exists because the most expensive AI problems are rarely model problems. They live in the seams: between a customer action and a financial record, between an approval and an automation, or between a strategic priority and the system expected to carry it.</p>
               <p>The consultancy combines diagnosis, operating design, and hands-on implementation. Specialist collaborators can join when the work calls for them, while Focal Point retains accountability for the whole system.</p>
             </div>
           </div>

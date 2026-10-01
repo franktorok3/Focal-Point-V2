@@ -1,11 +1,11 @@
 import { Reveal } from '@/components/reveal'
 
 const frictions = [
-  'Disconnected tools',
-  'Unclear ownership',
-  'Scattered data',
-  'Slow execution',
-  'No single system of record',
+  'Journeys that break at the handoff',
+  'Campaigns that forget what they learned',
+  'Dashboards that cannot explain the number',
+  'Automation with no accountable owner',
+  'AI experiments with no path to production',
 ]
 
 export function Problem() {
@@ -15,12 +15,11 @@ export function Problem() {
         <div className="lg:col-span-4">
           <Reveal>
             <p className="text-xs font-medium tracking-[0.18em] text-accent uppercase">
-              The real problem
+              The AI gap
             </p>
             <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
-              Growth rarely stalls for the reasons leaders expect. The
-              bottleneck is almost never the market — it&apos;s the way work is
-              organized.
+              Most organizations do not lack AI ideas. They lack the operating
+              conditions that make those ideas useful, measurable, and safe.
             </p>
           </Reveal>
         </div>
@@ -28,15 +27,15 @@ export function Problem() {
         <div className="lg:col-span-8">
           <Reveal delay={100}>
             <h2 className="font-serif text-3xl leading-[1.12] tracking-tight text-balance sm:text-4xl lg:text-5xl">
-              Most organizations don&apos;t have a marketing problem. They have a{' '}
-              <span className="text-accent">clarity problem.</span>
+              AI doesn&apos;t fix a fragmented business. It makes the{' '}
+              <span className="text-accent">fragmentation move faster.</span>
             </h2>
           </Reveal>
 
           <Reveal delay={180}>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty">
-              The symptoms show up everywhere — but they trace back to the same
-              root cause.
+              When customer journeys, data, ownership, and decisions live in
+              separate places, adding a model creates speed without direction.
             </p>
           </Reveal>
 

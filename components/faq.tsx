@@ -14,12 +14,12 @@ const questions = [
   {
     question: 'Do you build AI agents?',
     answer:
-      'Yes, when an agent is the right component. The engagement begins with the operating problem and the required controls. Any agent is designed around authenticated tools, durable state, explicit approvals, exception handling, and verified downstream action.',
+      'Yes—when an agent can improve a real decision or action. We do not begin with a chatbot-shaped answer. Every agent is designed around authenticated tools, durable state, explicit approvals, exception handling, and proof that the downstream work happened.',
   },
   {
     question: 'What happens after the audit?',
     answer:
-      'You receive a decision-ready map and prioritized plan that your team can execute. If useful, Focal Point can lead the build or remain embedded through Fractional Transformation & AI Operations.',
+      'You receive a decision-ready map and prioritized plan that your team can execute. If useful, Focal Point can lead the AI-Powered Growth System Build or remain embedded through the Fractional AI & Transformation Office.',
   },
 ]
 

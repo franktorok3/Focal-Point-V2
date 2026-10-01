@@ -23,7 +23,7 @@ export function GET() {
       <channel>
         <title>Focal Point Field Notes</title>
         <link>${base}/insights</link>
-        <description>Practical thinking on systems, data, operations, transformation, and applied AI.</description>
+        <description>Strong opinions, operationally tested—on AI, experience, data, growth, and the systems that make them work.</description>
         ${items}
       </channel>
     </rss>`

@@ -3,39 +3,39 @@ import { Reveal } from '@/components/reveal'
 const services = [
   {
     no: '01',
-    title: 'Brand & positioning strategy',
-    body: 'Sharpen who you are, who you serve, and why it matters — the foundation every system is built on.',
-    tags: ['Positioning', 'Messaging', 'Narrative'],
+    title: 'AI-powered experiences',
+    body: 'Build websites, content systems, and customer journeys that use intelligence to remove friction—not add another gimmick.',
+    tags: ['Web', 'UX', 'Conversion'],
   },
   {
     no: '02',
-    title: 'Marketing operations',
-    body: 'Connect teams, tools, and processes into one coordinated engine with clear ownership end to end.',
-    tags: ['Process', 'Tooling', 'Ownership'],
+    title: 'Intelligent campaigns',
+    body: 'Connect campaign strategy, audience intelligence, content operations, CRM, and optimization into one learning loop.',
+    tags: ['Campaigns', 'CRM', 'Lifecycle'],
   },
   {
     no: '03',
-    title: 'AI workflow design',
-    body: 'Identify where AI removes friction and design dependable, human-in-the-loop workflows around it.',
-    tags: ['Automation', 'Agents', 'Governance'],
+    title: 'Decision intelligence',
+    body: 'Build dashboards and analysis that can explain the number, trace the evidence, and sharpen the next decision.',
+    tags: ['Dashboards', 'Attribution', 'Forecasting'],
   },
   {
     no: '04',
-    title: 'CRM & automation planning',
-    body: 'Architect the data model, lifecycle stages, and automations that keep your pipeline moving.',
-    tags: ['Data model', 'Lifecycle', 'Routing'],
+    title: 'Agentic operations',
+    body: 'Design agents and workflows with memory, approvals, recovery paths, and verified downstream action.',
+    tags: ['Agents', 'Automation', 'Governance'],
   },
   {
     no: '05',
-    title: 'Analytics & dashboard strategy',
-    body: 'Define the metrics that matter and the reporting that turns data into decisions, not noise.',
-    tags: ['Metrics', 'Reporting', 'Insight'],
+    title: 'Data and identity architecture',
+    body: 'Give customers, transactions, campaigns, and decisions durable definitions before asking AI to reason across them.',
+    tags: ['Identity', 'Lineage', 'Data model'],
   },
   {
     no: '06',
-    title: 'Campaign systems & lead generation',
-    body: 'Build repeatable campaign systems that generate, qualify, and route demand at scale.',
-    tags: ['Demand', 'Campaigns', 'Pipeline'],
+    title: 'AI governance and adoption',
+    body: 'Turn policy into operating design: clear boundaries, accountable owners, usable controls, and a path from pilot to practice.',
+    tags: ['Controls', 'Adoption', 'Operating model'],
   },
 ]
 
@@ -50,12 +50,12 @@ export function Services() {
                 Capabilities
               </p>
               <h2 className="mt-5 max-w-2xl font-serif text-3xl leading-[1.05] tracking-tight text-balance sm:text-5xl">
-                Six disciplines, one connected system.
+                AI across the system—not bolted onto the side.
               </h2>
             </div>
             <p className="text-sm leading-relaxed text-muted-foreground sm:col-span-4">
-              We work across the full stack of growth — from the story you tell
-              to the systems that deliver it.
+              We work across the full stack of growth—from the experience a
+              customer sees to the evidence and operations behind it.
             </p>
           </div>
         </Reveal>

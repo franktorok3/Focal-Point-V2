@@ -13,34 +13,34 @@ export const offerings: Offering[] = [
   {
     slug: 'systems-clarity-audit',
     number: '01',
-    name: 'Systems Clarity Audit',
+    name: 'AI & Growth Systems Audit',
     eyebrow: 'Diagnose',
     summary:
-      'Find the operational constraint beneath the symptoms and turn it into a sequenced, evidence-backed plan.',
+      'Find the highest-value AI opportunity—and the experience, data, measurement, and operating conditions required to make it real.',
     bestFor:
-      'Leaders dealing with tool sprawl, unclear ownership, unreliable reporting, or automation that creates more exceptions than it removes.',
+      'Leaders with no shortage of AI ideas but no shared view of which opportunity matters, what it depends on, or how success will be measured.',
     duration: 'Typically 2–3 weeks',
     deliverables: [
-      'Current-state system and handoff map',
-      'Source-of-truth and identity assessment',
-      'Friction, risk, and dependency register',
-      'Prioritized 90-day action plan',
+      'Customer journey, system, and handoff map',
+      'AI opportunity and readiness assessment',
+      'Data, measurement, risk, and dependency register',
+      'Prioritized 90-day AI and growth roadmap',
       'Executive readout and implementation options',
     ],
   },
   {
     slug: 'operating-system-build',
     number: '02',
-    name: 'Operating System Build',
+    name: 'AI-Powered Growth System Build',
     eyebrow: 'Implement',
     summary:
-      'Design and build the connected workflows, data model, automation, and reporting needed to run the work reliably.',
+      'Build the connected experience, campaign engine, data, dashboards, workflows, and agents required for the priority outcome.',
     bestFor:
-      'Organizations ready to move from an agreed plan to a working operating system without adding another disconnected platform.',
+      'Organizations ready to move from AI strategy or isolated pilots to a working capability customers and teams can actually use.',
     duration: 'Typically 6–12 weeks',
     deliverables: [
-      'Target-state architecture and implementation plan',
-      'Governed workflows and integrations',
+      'Target-state experience and systems architecture',
+      'Web, campaign, CRM, workflow, and agent implementation',
       'Exception handling and approval paths',
       'Decision-ready reporting',
       'Documentation, training, and launch support',
@@ -49,16 +49,16 @@ export const offerings: Offering[] = [
   {
     slug: 'fractional-transformation-operations',
     number: '03',
-    name: 'Fractional Transformation & AI Operations',
+    name: 'Fractional AI & Transformation Office',
     eyebrow: 'Operate',
     summary:
-      'Embedded senior leadership to keep systems, data, vendors, and AI initiatives moving as one portfolio.',
+      'Embedded senior leadership to turn scattered AI, growth, data, and systems initiatives into one accountable transformation portfolio.',
     bestFor:
-      'Leadership teams that need ongoing transformation capacity and technical judgment without adding a full-time executive role.',
+      'Leadership teams that need sustained AI and transformation capacity without adding a full-time executive or another layer of agency management.',
     duration: 'Ongoing, usually 3+ months',
     deliverables: [
       'Transformation portfolio and operating cadence',
-      'AI and automation opportunity pipeline',
+      'AI, experience, campaign, and automation opportunity pipeline',
       'Vendor and implementation oversight',
       'Governance, approvals, and risk controls',
       'Monthly decision and progress readout',
@@ -195,14 +195,14 @@ export type Insight = {
 export const insights: Insight[] = [
   {
     slug: 'workflow-is-not-a-system-until-it-remembers',
-    title: 'A workflow is not a system until it remembers',
+    title: 'Automation fires. Systems remember.',
     description:
-      'Why state, ownership, recovery, and evidence separate operational systems from impressive demonstrations.',
+      'The difference between a workflow that runs and an operating system that knows what happened next.',
     pillar: 'Systems that scale',
     date: 'September 30, 2026',
     readTime: '6 min read',
     thesis:
-      'A trigger followed by an action is automation. It becomes an operating system only when it can explain what happened, what should happen next, and how to recover when reality interrupts the happy path.',
+      'A trigger can move work. Only memory makes it accountable. The system must know what happened, what comes next, and how to recover when reality interrupts the demo.',
     sections: [
       {
         heading: 'The demo hides the hard part',
@@ -235,14 +235,14 @@ export const insights: Insight[] = [
   },
   {
     slug: 'human-in-the-loop-is-an-operating-design',
-    title: 'Human-in-the-loop is an operating design, not a disclaimer',
+    title: 'A human in the loop is not a control system',
     description:
-      'Approval works only when the person, decision, evidence, timing, and fallback are designed explicitly.',
+      '“A person reviews it” is not governance. The decision, evidence, authority, deadline, and fallback all need a design.',
     pillar: 'Applied AI with controls',
     date: 'September 30, 2026',
     readTime: '5 min read',
     thesis:
-      'Adding “a human reviews the output” to an AI workflow does not create governance. It often creates an invisible queue and a new point of failure.',
+      'Adding a reviewer to an AI workflow does not create governance. Without a designed decision boundary, it creates an invisible queue and calls it control.',
     sections: [
       {
         heading: 'Review is not the same as accountability',
@@ -273,14 +273,14 @@ export const insights: Insight[] = [
   },
   {
     slug: 'one-source-of-truth-starts-with-identity',
-    title: 'One source of truth starts with identity, not dashboards',
+    title: 'Your dashboard is not a source of truth',
     description:
-      'Why polished reporting cannot repair unresolved definitions of people, accounts, transactions, and ownership.',
+      'A polished number is still the wrong number when nobody can trace the person, transaction, or rule beneath it.',
     pillar: 'Data that supports decisions',
     date: 'September 30, 2026',
     readTime: '6 min read',
     thesis:
-      'A dashboard can reconcile totals and still misrepresent reality. The test is whether a decision can be traced back to the same entity and transaction definitions used by operations and finance.',
+      'Truth does not begin in the chart. It begins with identity, grain, and lineage—the unglamorous rules that let operations and finance mean the same thing.',
     sections: [
       {
         heading: 'The phrase hides several different truths',

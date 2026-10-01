@@ -16,7 +16,7 @@ export default function InsightsPage() {
     <div className="min-h-dvh">
       <SiteNav />
       <main>
-        <PageHero eyebrow="Field notes" title="Ideas for building through complexity." description="Practical thinking for leaders connecting systems, data, operations, finance, and AI." />
+        <PageHero eyebrow="Field notes" title="Strong opinions, operationally tested." description="Practical thinking for leaders who need AI, data, experience, and operations to survive the distance between a demo and the real world." />
         <section className="border-b border-border">
           <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-28">
             <div className="grid gap-6 lg:grid-cols-3">

@@ -3,9 +3,9 @@ import { Reveal } from '@/components/reveal'
 import { FocalMark } from '@/components/focal-mark'
 
 const principles = [
-  'Trace the real process before proposing the platform.',
-  'Preserve unknowns instead of manufacturing certainty.',
-  'Treat approval, recovery, and auditability as product features.',
+  'Start with the decision, not the demo.',
+  'Make the data earn the dashboard.',
+  'Give every agent a boundary, an owner, and a way back.',
 ]
 
 export function Founder() {
@@ -18,7 +18,7 @@ export function Founder() {
             Founder-led by design
           </p>
           <h2 className="mt-5 font-serif text-4xl leading-[1.04] tracking-tight text-balance sm:text-6xl">
-            Strategy that survives contact with operations.
+            AI strategy that survives contact with reality.
           </h2>
         </Reveal>
 
@@ -26,14 +26,14 @@ export function Founder() {
           <Reveal delay={100}>
             <p className="text-xl leading-relaxed text-primary-foreground/80 text-pretty sm:text-2xl">
               Focal Point is led by Frank Torok, a systems and transformation
-              leader working where strategy, operations, finance, data, and AI
-              meet.
+              leader working where customer experience, growth, finance, data,
+              operations, and AI collide.
             </p>
             <p className="mt-6 text-base leading-relaxed text-primary-foreground/65">
-              The work is practical by design: trace the real process, establish
-              a reliable source of truth, and build workflows people can actually
-              run. When specialist support is needed, Focal Point assembles the
-              right collaborators around one accountable system.
+              The work begins where the pitch deck ends: with the actual data,
+              handoffs, incentives, and systems that determine whether an idea
+              can operate. When specialist support is needed, Focal Point brings
+              the right collaborators around one accountable growth system.
             </p>
           </Reveal>
 
