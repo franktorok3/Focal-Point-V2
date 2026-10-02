@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { Ratelimit } from '@upstash/ratelimit'
+import { Redis } from '@upstash/redis'
 import { z } from 'zod'
 
 export const runtime = 'nodejs'
@@ -8,12 +10,22 @@ const contactSchema = z.object({
   name: z.string().trim().min(2).max(100),
   email: z.string().trim().email().max(200),
   company: z.string().trim().max(150).optional().default(''),
+  service: z.string().trim().max(150).optional().default(''),
   timeframe: z.string().trim().max(80).optional().default(''),
   message: z.string().trim().min(20).max(5000),
   website: z.string().max(500).optional().default(''),
 })
 
-const attempts = new Map<string, { count: number; resetAt: number }>()
+const redisUrl = process.env.UPSTASH_REDIS_REST_URL
+const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN
+const contactRateLimit =
+  redisUrl && redisToken
+    ? new Ratelimit({
+        redis: new Redis({ url: redisUrl, token: redisToken }),
+        limiter: Ratelimit.slidingWindow(5, '15 m'),
+        prefix: 'focal-point:contact',
+      })
+    : null
 
 function escapeHtml(value: string) {
   return value.replace(/[&<>'"]/g, (character) => {
@@ -28,23 +40,7 @@ function escapeHtml(value: string) {
   })
 }
 
-function isRateLimited(key: string) {
-  const now = Date.now()
-  const current = attempts.get(key)
-  if (!current || current.resetAt < now) {
-    attempts.set(key, { count: 1, resetAt: now + 15 * 60 * 1000 })
-    return false
-  }
-  current.count += 1
-  return current.count > 5
-}
-
 export async function POST(request: Request) {
-  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
-  if (isRateLimited(ip)) {
-    return NextResponse.json({ error: 'Too many attempts. Please try again later.' }, { status: 429 })
-  }
-
   let payload: unknown
   try {
     payload = await request.json()
@@ -57,7 +53,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Please check the form fields and try again.' }, { status: 400 })
   }
 
-  const { name, email, company, timeframe, message, website } = parsed.data
+  const { name, email, company, service, timeframe, message, website } = parsed.data
   if (website) return NextResponse.json({ ok: true })
 
   const user = process.env.IONOS_SMTP_USER
@@ -70,6 +66,26 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Email delivery is temporarily unavailable.' }, { status: 503 })
   }
 
+  if (!contactRateLimit) {
+    console.error('Contact delivery is not configured: missing shared rate-limit storage.')
+    return NextResponse.json({ error: 'Email delivery is temporarily unavailable.' }, { status: 503 })
+  }
+
+  const ip = request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || 'unknown'
+  try {
+    const { success, reset } = await contactRateLimit.limit(ip)
+    if (!success) {
+      const retryAfter = Math.max(1, Math.ceil((reset - Date.now()) / 1000))
+      return NextResponse.json(
+        { error: 'Too many attempts. Please try again later.' },
+        { status: 429, headers: { 'Retry-After': retryAfter.toString() } },
+      )
+    }
+  } catch (error) {
+    console.error('Contact rate-limit check failed.', error)
+    return NextResponse.json({ error: 'Email delivery is temporarily unavailable.' }, { status: 503 })
+  }
+
   const transporter = nodemailer.createTransport({
     host: 'smtp.ionos.com',
     port: 465,
@@ -78,11 +94,12 @@ export async function POST(request: Request) {
   })
 
   const submittedAt = new Date().toISOString()
-  const subject = `New Focal Point inquiry — ${company || name}`
+  const subject = `New Focal Point inquiry — ${service || company || name}`
   const text = [
     `Name: ${name}`,
     `Email: ${email}`,
     `Company: ${company || 'Not provided'}`,
+    `Engagement: ${service || 'Not specified'}`,
     `Timeframe: ${timeframe || 'Not provided'}`,
     `Submitted: ${submittedAt}`,
     '',
@@ -103,6 +120,7 @@ export async function POST(request: Request) {
           <tr><td><strong>Name</strong></td><td>${escapeHtml(name)}</td></tr>
           <tr><td><strong>Email</strong></td><td>${escapeHtml(email)}</td></tr>
           <tr><td><strong>Company</strong></td><td>${escapeHtml(company || 'Not provided')}</td></tr>
+          <tr><td><strong>Engagement</strong></td><td>${escapeHtml(service || 'Not specified')}</td></tr>
           <tr><td><strong>Timeframe</strong></td><td>${escapeHtml(timeframe || 'Not provided')}</td></tr>
           <tr><td><strong>Submitted</strong></td><td>${submittedAt}</td></tr>
         </table>

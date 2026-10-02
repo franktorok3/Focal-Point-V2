@@ -11,7 +11,14 @@ const inputClasses =
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error'
 
-export function Contact() {
+type ContactProps = {
+  selectedService?: {
+    slug: string
+    name: string
+  }
+}
+
+export function Contact({ selectedService }: ContactProps = {}) {
   const [status, setStatus] = useState<FormStatus>('idle')
   const [error, setError] = useState('')
 
@@ -86,6 +93,14 @@ export function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="rounded-2xl border border-border bg-card p-6 sm:p-8">
+                  {selectedService ? (
+                    <div className="mb-6 rounded-xl border border-accent/30 bg-accent/5 px-4 py-3">
+                      <p className="text-xs font-medium uppercase tracking-[0.14em] text-accent">Selected engagement</p>
+                      <p className="mt-1 font-medium text-foreground">{selectedService.name}</p>
+                      <input type="hidden" name="service" value={selectedService.name} />
+                    </div>
+                  ) : null}
+
                   <div className="grid gap-5 sm:grid-cols-2">
                     <div className="flex flex-col gap-2">
                       <label htmlFor="name" className="text-sm font-medium">Name</label>

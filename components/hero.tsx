@@ -97,8 +97,8 @@ export function Hero() {
             <Image
               src="/images/hero-systems-to-focal-point.png"
               alt="Editorial systems map showing disconnected workflows converging into one clear focal point."
-              width={1792}
-              height={896}
+              width={1920}
+              height={819}
               priority
               sizes="(max-width: 768px) 100vw, 1152px"
               className="h-auto w-full"
