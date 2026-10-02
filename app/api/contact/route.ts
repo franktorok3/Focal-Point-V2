@@ -58,10 +58,12 @@ export async function POST(request: Request) {
 
   const user = process.env.IONOS_SMTP_USER
   const password = process.env.IONOS_SMTP_PASSWORD
+  const smtpHost = process.env.IONOS_SMTP_HOST || 'smtp.ionos.com'
+  const smtpPort = Number(process.env.IONOS_SMTP_PORT || '587')
   const to = process.env.CONTACT_TO || 'hello@focalpointny.com'
   const from = process.env.CONTACT_FROM || user
 
-  if (!user || !password || !from) {
+  if (!user || !password || !from || !Number.isInteger(smtpPort)) {
     console.error('Contact delivery is not configured: missing IONOS SMTP environment variables.')
     return NextResponse.json({ error: 'Email delivery is temporarily unavailable.' }, { status: 503 })
   }
@@ -87,10 +89,12 @@ export async function POST(request: Request) {
   }
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.ionos.com',
-    port: 465,
-    secure: true,
+    host: smtpHost,
+    port: smtpPort,
+    secure: smtpPort === 465,
+    requireTLS: smtpPort === 587,
     auth: { user, pass: password },
+    tls: { minVersion: 'TLSv1.2' },
   })
 
   const submittedAt = new Date().toISOString()
