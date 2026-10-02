@@ -1,10 +1,13 @@
 import { SiteNav } from '@/components/site-nav'
 import { Hero } from '@/components/hero'
 import { Problem } from '@/components/problem'
+import { Capabilities } from '@/components/capabilities'
 import { Method } from '@/components/method'
-import { Services } from '@/components/services'
-import { Experience } from '@/components/experience'
-import { Engagements } from '@/components/engagements'
+import { Founder } from '@/components/founder'
+import { SelectedWork } from '@/components/selected-work'
+import { Offerings } from '@/components/offerings'
+import { InsightsPreview } from '@/components/insights-preview'
+import { FAQ } from '@/components/faq'
 import { Contact } from '@/components/contact'
 import { SiteFooter } from '@/components/site-footer'
 
@@ -15,10 +18,13 @@ export default function Page() {
       <main>
         <Hero />
         <Problem />
+        <Capabilities />
         <Method />
-        <Services />
-        <Experience />
-        <Engagements />
+        <Founder />
+        <SelectedWork />
+        <Offerings />
+        <InsightsPreview />
+        <FAQ />
         <Contact />
       </main>
       <SiteFooter />

@@ -7,10 +7,10 @@ import { Button } from '@/components/ui/button'
 import { FocalMark } from '@/components/focal-mark'
 
 const links = [
-  { label: 'Method', href: '#method' },
-  { label: 'Services', href: '#services' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Engagements', href: '#engagements' },
+  { label: 'Work', href: '/work' },
+  { label: 'Services', href: '/services' },
+  { label: 'Insights', href: '/insights' },
+  { label: 'About', href: '/about' },
 ]
 
 export function SiteNav() {
@@ -35,7 +35,7 @@ export function SiteNav() {
     >
       <nav className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 sm:px-8">
         <a
-          href="#top"
+          href="/"
           className="flex items-center gap-2.5 text-foreground"
           aria-label="Focal Point home"
         >
@@ -62,7 +62,7 @@ export function SiteNav() {
             size="lg"
             className="h-9 px-4"
             nativeButton={false}
-            render={<a href="#contact">Start a conversation</a>}
+            render={<a href="/contact">Start a conversation</a>}
           />
         </div>
 
@@ -95,7 +95,7 @@ export function SiteNav() {
               className="mt-3 h-11"
               nativeButton={false}
               render={
-                <a href="#contact" onClick={() => setOpen(false)}>
+                <a href="/contact" onClick={() => setOpen(false)}>
                   Start a conversation
                 </a>
               }

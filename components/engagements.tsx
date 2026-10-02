@@ -8,17 +8,17 @@ const models = [
     body: 'A fast, intensive engagement to align direction, define priorities, and produce a clear plan of action.',
   },
   {
-    name: 'Systems Audit',
+    name: 'AI & Growth Systems Audit',
     duration: 'Diagnostic',
     body: 'A deep review of your tools, data, and workflows to surface friction and map the path to a single system of record.',
   },
   {
-    name: 'Growth Engine Build',
+    name: 'AI-Powered Growth System Build',
     duration: 'Implementation',
     body: 'Hands-on design and build of the marketing, automation, and AI systems that power scalable growth.',
   },
   {
-    name: 'Fractional Marketing / AI Operations',
+    name: 'Fractional AI & Transformation Office',
     duration: 'Ongoing',
     body: 'Embedded strategic leadership to run and continuously evolve your marketing and AI operations.',
   },

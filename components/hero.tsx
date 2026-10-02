@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Reveal } from '@/components/reveal'
@@ -39,14 +40,14 @@ export function Hero() {
           <div className="flex items-center gap-4 text-xs font-medium tracking-[0.18em] text-muted-foreground uppercase">
             <span className="text-accent">Focal Point</span>
             <span className="h-px w-8 bg-border" />
-            <span>Strategy &amp; Systems — New York</span>
+            <span>AI transformation, built to operate</span>
           </div>
         </Reveal>
 
         <Reveal delay={80}>
           <h1 className="mt-8 max-w-4xl font-serif text-[2.75rem] leading-[0.98] tracking-tight text-balance sm:text-7xl lg:text-[5.75rem]">
-            Simplify the systems
-            <br className="hidden sm:block" /> behind{' '}
+            Turn AI ambition into
+            <br className="hidden sm:block" /> measurable{' '}
             <span className="text-accent">growth.</span>
           </h1>
         </Reveal>
@@ -54,8 +55,9 @@ export function Hero() {
         <div className="mt-10 grid gap-8 border-t border-border pt-8 sm:grid-cols-12 sm:gap-6">
           <Reveal delay={160} className="sm:col-span-7">
             <p className="max-w-2xl text-lg leading-relaxed text-muted-foreground text-pretty sm:text-xl">
-              Focal Point helps organizations connect marketing, operations,
-              data, and AI into clearer, faster, more scalable workflows.
+              Focal Point connects websites, campaigns, data, dashboards, and
+              governed AI agents into one growth system—so the work gets
+              smarter without the business getting messier.
             </p>
           </Reveal>
 
@@ -67,7 +69,7 @@ export function Hero() {
                 nativeButton={false}
                 render={
                   <a href="#contact">
-                    Start a conversation
+                    Find the AI leverage
                     <ArrowRight className="ml-1 size-4 transition-transform group-hover/button:translate-x-0.5" />
                   </a>
                 }
@@ -77,11 +79,36 @@ export function Hero() {
                 variant="ghost"
                 className="h-12 w-full px-5 text-base text-muted-foreground hover:text-foreground sm:w-auto"
                 nativeButton={false}
-                render={<a href="#services">Explore our work</a>}
+                render={<a href="/work">See what operational AI looks like</a>}
               />
             </div>
           </Reveal>
         </div>
+
+        <Reveal delay={280}>
+          <p className="mt-8 text-sm text-muted-foreground">
+            Strategy, experience, intelligence, and hands-on implementation—led
+            by Frank Torok in New York.
+          </p>
+        </Reveal>
+
+        <Reveal delay={320}>
+          <figure className="mt-12 overflow-hidden rounded-2xl border border-border bg-card">
+            <Image
+              src="/images/hero-systems-to-focal-point.png"
+              alt="Editorial systems map showing disconnected workflows converging into one clear focal point."
+              width={1920}
+              height={819}
+              priority
+              sizes="(max-width: 768px) 100vw, 1152px"
+              className="h-auto w-full"
+            />
+            <figcaption className="flex flex-col gap-2 border-t border-border px-5 py-4 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+              <span>AI creates leverage only when the system beneath it can carry the weight.</span>
+              <span className="font-mono uppercase tracking-[0.14em]">The Focal Point thesis</span>
+            </figcaption>
+          </figure>
+        </Reveal>
       </div>
     </section>
   )

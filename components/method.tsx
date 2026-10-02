@@ -3,18 +3,18 @@ import { Reveal } from '@/components/reveal'
 const steps = [
   {
     num: '01',
-    title: 'Simplify',
-    body: 'Cut the noise. We map what exists, retire what doesn\u2019t serve growth, and reduce your stack to the systems that actually move the business.',
+    title: 'Find the signal',
+    body: 'Trace the real customer journey, decision, data, and handoff. The useful AI opportunity is usually hiding beneath the loudest request.',
   },
   {
     num: '02',
-    title: 'Focus',
-    body: 'Align on what matters. We define clear ownership, a single source of truth, and the priorities that turn scattered effort into momentum.',
+    title: 'Build the spine',
+    body: 'Connect the experience, campaign, data, dashboard, and operating workflow around one accountable source of truth.',
   },
   {
     num: '03',
-    title: 'Expand',
-    body: 'Scale with confidence. We build the workflows, automation, and AI infrastructure that let you grow without re-creating the chaos.',
+    title: 'Put AI to work',
+    body: 'Add intelligence where it can improve a decision, accelerate an action, or remove friction—and prove what happened downstream.',
   },
 ]
 
@@ -27,7 +27,7 @@ export function Method() {
             The method
           </p>
           <h2 className="mt-5 max-w-2xl font-serif text-3xl leading-tight tracking-tight text-balance sm:text-5xl">
-            A repeatable path from complexity to clarity.
+            Less AI theater. More operating advantage.
           </h2>
         </Reveal>
 
