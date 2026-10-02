@@ -1,4 +1,5 @@
 import { ArrowUpRight } from 'lucide-react'
+import Image from 'next/image'
 import { insights } from '@/lib/content'
 import { Reveal } from '@/components/reveal'
 
@@ -23,10 +24,21 @@ export function InsightsPreview() {
         </Reveal>
 
         <div className="mt-12 border-t border-border">
-          {insights.map((insight, index) => (
+          {[...insights].reverse().slice(0, 3).map((insight, index) => (
             <Reveal key={insight.slug} delay={index * 70}>
               <article className="group grid gap-5 border-b border-border py-8 sm:grid-cols-12 sm:items-start sm:py-10">
                 <div className="sm:col-span-3">
+                  <a href={`/insights/${insight.slug}`} className="mb-4 block overflow-hidden rounded-lg border border-border bg-secondary/30">
+                    <Image
+                      src={insight.image}
+                      alt=""
+                      width={1774}
+                      height={887}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      sizes="(max-width: 640px) 100vw, 25vw"
+                      className="aspect-2/1 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                    />
+                  </a>
                   <p className="font-mono text-[0.68rem] uppercase tracking-[0.14em] text-accent">
                     {insight.pillar}
                   </p>

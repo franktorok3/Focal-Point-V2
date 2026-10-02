@@ -37,6 +37,7 @@ export function SiteFooter() {
           <p>&copy; {new Date().getFullYear()} Focal Point NY. All rights reserved.</p>
           <div className="flex flex-wrap gap-5">
             <a href="mailto:hello@focalpointny.com" className="hover:text-foreground">hello@focalpointny.com</a>
+            <a href="https://www.linkedin.com/company/focalpointny/" target="_blank" rel="noreferrer" className="hover:text-foreground">LinkedIn</a>
             <a href="/privacy" className="hover:text-foreground">Privacy</a>
             <a href="/terms" className="hover:text-foreground">Terms</a>
           </div>

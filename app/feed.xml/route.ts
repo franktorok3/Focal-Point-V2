@@ -6,14 +6,15 @@ function escapeXml(value: string) {
 
 export function GET() {
   const base = 'https://www.focalpointny.com'
-  const items = insights
+  const items = [...insights]
+    .reverse()
     .map((insight) => `
       <item>
         <title>${escapeXml(insight.title)}</title>
         <link>${base}/insights/${insight.slug}</link>
         <guid>${base}/insights/${insight.slug}</guid>
         <description>${escapeXml(insight.description)}</description>
-        <pubDate>${new Date('2026-09-30T12:00:00-04:00').toUTCString()}</pubDate>
+        <pubDate>${new Date(insight.publishedAt).toUTCString()}</pubDate>
         <category>${escapeXml(insight.pillar)}</category>
       </item>`)
     .join('')

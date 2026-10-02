@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import { getInsight, insights } from '@/lib/content'
 import { SiteNav } from '@/components/site-nav'
@@ -17,7 +18,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: insight.title,
     description: insight.description,
     alternates: { canonical: `/insights/${insight.slug}` },
-    openGraph: { type: 'article', title: insight.title, description: insight.description },
+    openGraph: {
+      type: 'article',
+      title: insight.title,
+      description: insight.description,
+      images: [{ url: insight.image, width: 1774, height: 887, alt: insight.imageAlt }],
+    },
+    twitter: { card: 'summary_large_image', images: [insight.image] },
   }
 }
 
@@ -31,10 +38,11 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
     '@type': 'Article',
     headline: insight.title,
     description: insight.description,
-    datePublished: '2026-09-30',
-    dateModified: '2026-09-30',
+    datePublished: insight.publishedAt,
+    dateModified: insight.publishedAt,
     author: { '@type': 'Person', name: 'Frank Torok' },
     publisher: { '@type': 'Organization', name: 'Focal Point NY', url: 'https://www.focalpointny.com' },
+    image: `https://www.focalpointny.com${insight.image}`,
     mainEntityOfPage: `https://www.focalpointny.com/insights/${insight.slug}`,
   }
 
@@ -54,6 +62,21 @@ export default async function InsightPage({ params }: { params: Promise<{ slug: 
               </div>
             </div>
           </header>
+          <div className="border-b border-border bg-secondary/25">
+            <div className="mx-auto max-w-6xl px-5 py-8 sm:px-8 sm:py-12">
+              <div className="overflow-hidden rounded-2xl border border-border bg-card">
+                <Image
+                  src={insight.image}
+                  alt={insight.imageAlt}
+                  width={1774}
+                  height={887}
+                  loading="eager"
+                  sizes="(max-width: 768px) 100vw, 1152px"
+                  className="h-auto w-full"
+                />
+              </div>
+            </div>
+          </div>
           <div className="mx-auto max-w-3xl px-5 py-16 sm:px-8 sm:py-24">
             <p className="border-l-2 border-accent pl-6 font-serif text-2xl leading-relaxed tracking-tight sm:text-3xl">{insight.thesis}</p>
             {insight.sections.map((section) => (

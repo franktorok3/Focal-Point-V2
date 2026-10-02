@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: 'AI-powered experiences, campaigns, decision intelligence, and operating systems—built to work together.',
     images: ['/images/hero-systems-to-focal-point.png'],
   },
-  icons: { icon: '/icon.svg', apple: '/apple-icon.png' },
+  icons: { icon: '/icon.svg', apple: '/icon.svg' },
 }
 
 export const viewport: Viewport = {
@@ -67,6 +67,7 @@ export default function RootLayout({
               url: 'https://www.focalpointny.com',
               email: 'hello@focalpointny.com',
               founder: { '@type': 'Person', name: 'Frank Torok' },
+              sameAs: ['https://www.linkedin.com/company/focalpointny/'],
               areaServed: 'United States',
               description:
                 'Founder-led consultancy building AI-powered experiences, campaigns, decision intelligence, and operating systems.',
