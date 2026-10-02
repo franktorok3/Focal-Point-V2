@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Reveal } from '@/components/reveal'
-import { FocalRings } from '@/components/focal-rings'
+import { FocalMark } from '@/components/focal-mark'
 
 export function Hero() {
   return (
@@ -25,13 +25,13 @@ export function Hero() {
         }}
       />
 
-      {/* geometric focal point, bleeding off the right edge */}
+      {/* oversized brand mark, bleeding off the right edge */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-24 -top-10 hidden w-[34rem] lg:block xl:-right-12"
+        className="pointer-events-none absolute -right-24 top-20 hidden w-[34rem] lg:block xl:-right-10"
       >
         <Reveal>
-          <FocalRings className="w-full" />
+          <FocalMark className="w-full opacity-[0.12]" />
         </Reveal>
       </div>
 
